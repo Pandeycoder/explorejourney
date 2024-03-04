@@ -55,6 +55,22 @@
     align-items: space-evenly;
 }
 
+/* update -04/03---------*/ 
+.f-info i {
+    display: inline-block;
+    text-align: center;
+    transition: 0.50s ease-in-out;
+    cursor: pointer;
+    
+  }
+
+.f-info i:hover {
+    background-color: white;;
+    color:rgb(248, 24, 24);
+    rotate: 1 2 1 360deg;
+    cursor: pointer;
+}
+
 
 /* ------------card style-------------*/
 .listing-card{

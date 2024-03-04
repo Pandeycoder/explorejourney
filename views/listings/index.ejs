@@ -5,31 +5,55 @@
     </form> -->
 
     <style>
-        .filters{
+      @media screen and (max-width: 768px) {
+         .filters .filter:nth-child(n+6) {
+            display: none;
+        }
+        .card{
+            margin-top: 6rem !important;
+        }
+        }
+
+        .filters {
+
+            position: fixed;
+            top: 3rem;
+            background-color: #fff;
+            /* Adjust according to your design */
+            padding: 1rem;
+            /* Adjust according to your design */
+            z-index: 1000;
+            /* Adjust according to your design and layout */
+            width: 100%;
+            /* Adjust according to your design */
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
             display: flex;
             flex-wrap: wrap;
-            align-items: center;         
+            align-items: center;
         }
-        .filter{
-           text-align: center;
-           margin-right: 1.4rem;
-           margin-top: 2rem;
-           opacity: 0.7;
 
+        .filter {
+            text-align: center;
+            margin-right: 1.4rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+            flex-wrap: wrap;
         }
-        .filter:hover{
+
+        .filter:hover {
             opacity: 1;
             cursor: pointer;
         }
 
-        .filter p{
-            font-size: 0.8rem ;
+        .filter p {
+            font-size: 0.8rem;
         }
-        .taxt-info{
+
+        .taxt-info {
             display: none;
         }
 
-        .tax-toggle{
+        .tax-toggle {
             border: 1px solid black;
             border-radius: 1rem;
             height: 3.25rem;
@@ -111,7 +135,7 @@
             <a href="/listing/<%= listing._id %>" class="listing-list">
 
         
-            <div class="card col listing-card" >
+            <div class="card col listing-card mt-5" >
                 <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem;"/>
                 
                 <div class="card-img-overlay"></div>
