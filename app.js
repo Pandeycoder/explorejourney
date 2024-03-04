@@ -43,7 +43,7 @@ main()
 
     });
 async function main() {
-    mongoose.connect(dbUrl);
+    mongoose.connect(dbUrl); //here also dbUrl
 }
 
 app.set("view engine", "ejs");
@@ -69,8 +69,8 @@ store.on("error",()=>{
 })
 
 const ssessionOptions={
-    store,
-    secret:process.env.SECRET,
+     store, 
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie:{
