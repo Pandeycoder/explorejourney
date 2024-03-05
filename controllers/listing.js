@@ -31,7 +31,8 @@ module.exports.index=async (req, res) => {
         {
             req.flash("error"," listing you requested for does not exist !");
     
-            res.redirect("/listing");
+              // <!-- -------------------------update now url------------------------------------------------>
+            res.redirect("/");
         }
         res.render("listings/show.ejs", { listing });
     };
@@ -68,7 +69,9 @@ module.exports.index=async (req, res) => {
     
             req.flash("success", "New listing created successfully !");
     
-            res.redirect("/listing");
+            
+              // <!-- -------------------------update now url------------------------------------------------>
+            res.redirect("/");
       
     };
 
@@ -84,7 +87,9 @@ module.exports.index=async (req, res) => {
         {
             req.flash("error", " listing you requested for does not exist !");
     
-            res.redirect("/listing");
+            
+              // <!-- -------------------------update now url------------------------------------------------>
+            res.redirect("/");
         }
 
         //change image size and quality
@@ -129,7 +134,9 @@ module.exports.index=async (req, res) => {
        }
         req.flash("success", "listing updated successfully !");
         
-        res.redirect(`/listing/${id}`);
+              // <!-- -------------------------update now url------------------------------------------------>
+        
+        res.redirect(`/${id}`);
     
     };
 
@@ -145,6 +152,8 @@ module.exports.index=async (req, res) => {
         req.flash("success", "listing deleted successfully !");
         console.log(deletedListing);
     
-        res.redirect("/listing");
+        
+              // <!-- -------------------------update now url------------------------------------------------>
+        res.redirect("/");
     
     };

@@ -34,7 +34,7 @@ module.exports.isOwnerUser=async(req,res,next)=>{
     if(!listing.owner.equals(res.locals.currentUser._id))
     {
         req.flash("error","You don,t have permission to edit");
-       return res.redirect(`/listing/${id}`);
+       return res.redirect(`/${id}`);
     }
     next();
 };

@@ -123,7 +123,7 @@ app.use((req,res,next)=>{
 
 //-------------------routes added    .......................
 
-app.use("/listing",listingRouter);
+app.use("/",listingRouter);
 
 app.use("/listing/:id/reviews",reviewRouter);
 

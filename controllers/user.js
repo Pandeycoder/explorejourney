@@ -26,7 +26,9 @@ module.exports.userSignup=async (req, res) => {
                 return next(err);
             }
             req.flash("success", "user was register successfully");
-            res.redirect("/listing");
+            
+              // <!-- -------------------------update now url------------------------------------------------>
+            res.redirect("/");
 
         })
 
@@ -53,8 +55,9 @@ module.exports.renderLogin=(req, res) => {
  module.exports.login=async (req, res) => {
 
     req.flash("success","Welcome back to explorejurney !")
-
-    let redirectUrl= res.locals.redirectUrl || "/listing";
+    
+   // <!-- -------------------------update now url------------------------------------------------>
+    let redirectUrl= res.locals.redirectUrl || "/";
     res.redirect(redirectUrl);
 };
 
@@ -67,7 +70,9 @@ module.exports.logout=(req,res,next)=>{
            return next(err);
         }
         req.flash("success","you are logged out !");
-        res.redirect("/listing");
+        
+              // <!-- -------------------------update now url------------------------------------------------>
+        res.redirect("/");
     });
 
 };
