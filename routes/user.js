@@ -19,7 +19,7 @@ router.route("/login")
 .post( savedRedirectUrl,
     passport.authenticate("local",
         {
-            failureRedirect: '/login',
+            failureRedirect: '/users/login',
             failureFlash: true,
         }), userController.login
 
@@ -27,7 +27,7 @@ router.route("/login")
 .post(savedRedirectUrl,
     passport.authenticate("local",
         {
-            failureRedirect: '/login',
+            failureRedirect: '/users/login',
             failureFlash: true,
         }), userController.login
 

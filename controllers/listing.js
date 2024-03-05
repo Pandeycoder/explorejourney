@@ -19,7 +19,7 @@ module.exports.index=async (req, res) => {
     };
 
 
-    //--------------show route-------------
+    //--------------show route----------------------
 
     module.exports.showListing=async (req, res) => {
 
@@ -29,14 +29,14 @@ module.exports.index=async (req, res) => {
     
         if(!listing)
         {
-            req.flash("error", " listing you requested for does not exist !");
+            req.flash("error"," listing you requested for does not exist !");
     
             res.redirect("/listing");
         }
         res.render("listings/show.ejs", { listing });
     };
 
-    //-----------create post route-------
+    //-----------create post route--------------------
 
     module.exports.createListing=async (req, res,next) => {
         // let {title,description ,image ,price,country,location}=req.body;
