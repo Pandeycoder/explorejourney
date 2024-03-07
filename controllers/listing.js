@@ -7,7 +7,8 @@ const geocodingClient=mbxGeocoding({accessToken:mapToken});
 module.exports.index=async (req, res) => {
 
         const allListings = await Listing.find({});
-        res.render("listings/index.ejs", { allListings });
+        const canonicalUrl = 'https://explorejourney.onrender.com';
+        res.render("listings/index.ejs", { allListings },{ canonical: canonicalUrl });
     };
 
 
