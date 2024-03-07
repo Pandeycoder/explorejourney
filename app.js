@@ -144,10 +144,10 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error.ejs",{message});
 });
 
-// const PORT=process.env.PORT || 8081 ;
+const PORT=process.env.PORT || 8081 ;
 
-app.listen("8081", () => {
-    console.log("server is listening to : 8081");
+app.listen(PORT, () => {
+    console.log("server is listening to : ",PORT);
 });
 
 
