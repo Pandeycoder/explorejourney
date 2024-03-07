@@ -1,4 +1,7 @@
- body{
+html{
+  scroll-behavior: smooth;
+}
+body{
 
     display: flex;
     flex-direction: column;
@@ -43,6 +46,7 @@
 .f-info-socials i{
     margin-right: 1rem;
     font-size: 1.5rem;
+    color: black;
     
 }
 .f-info{
@@ -69,9 +73,6 @@
     color:rgb(248, 24, 24);
     rotate: 1 2 1 360deg;
     cursor: pointer;
-}
-.f-info-socials a{
-  color: black;
 }
 
 /*Footer dark---------------------*/
