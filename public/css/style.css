@@ -26,6 +26,49 @@ body{
 
 }
 
+.btn-search{
+  background-color: #fe424d;
+  color:#fff;
+  border-radius: 25px;
+  padding: 0rem 1rem 0 1rem;
+}
+.btn-search:hover{
+  background-color: #fe424d;
+  color:#fff;
+}
+.btn-search i{
+  display: inline;
+  margin-right: 0.75rem;
+}
+.search-input{
+  border-radius: 25px;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  font-size: 0.95rem;
+
+}
+
+.btn-list{
+  background-color: #fff;
+  color:#fff;
+  border-radius: 25px;
+  height: 2.75rem;
+  width: 5rem;
+  padding: 0rem 1rem 0 1rem;
+  border: 1px solid rgb(143, 138, 138);
+  box-shadow: 0 0px 0px black;
+    transition: 0.7s; 
+}
+.btn-list:hover{
+  box-shadow: 0 4px 8px #fff;
+  border: 1px solid rgb(150, 143, 143);
+}
+.btn-list i{
+  display: inline;
+  color: black;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
 /* -------footer style-----------------*/
 .f-info-links a{
     text-decoration: none;
@@ -164,6 +207,97 @@ body{
     opacity: 0.2;
     background-color: white;
 }
+
+/*---------------index page listing---------------------------------*/
+
+@media screen and (max-width: 768px) {
+ .filters .filter:nth-child(n+6) {
+    display: none;
+}
+.card{
+    margin-top: 6rem !important;
+}
+}
+
+.filters {
+
+    position: fixed;
+    top: 3rem;
+    background-color: #fff;
+    /* Adjust according to your design */
+    padding: 1rem;
+    /* Adjust according to your design */
+    z-index: 1000;
+    /* Adjust according to your design and layout */
+    width: 100%;
+    /* Adjust according to your design */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter {
+    text-align: center;
+    margin-right: 1.4rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+    flex-wrap: wrap;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.taxt-info {
+    display: none;
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.ourjourney-main
+{
+    background-color:#F4F2EF;;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.home-title{
+    text-align: center;
+    color:#866D4B;
+}
+.item--icon{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item--icon i{
+    font-size: 20px;
+    padding: 0.55rem;
+    align-items: center;
+    text-align: center; 
+}
+
 
 /*  ---------New Page-------------*/
 .add-btn{
