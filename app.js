@@ -140,7 +140,7 @@ app.use((err, req, res, next) => {
 
     let {statusCode=500 ,message="something went wrong"}=err;
 
-    // res.status(statusCode).send(message);
+   
     res.status(statusCode).render("error.ejs",{message});
 });
 
@@ -149,24 +149,5 @@ const PORT=process.env.PORT || 8081 ;
 app.listen(PORT, () => {
     console.log("server is listening to : ",PORT);
 });
-
-
-
-
-
-// app.get("/testListing",async (req,res)=>{
-
-//     let sampleListing = new Listing({
-//         title: "My New Villa",
-//         description : "By the beach",
-//         price: 1200,
-//         loaction: "Calangute , Goa",
-//         country: "India",
-//     });
-
-//     await sampleListing.save();
-//     console.log("sample was saved");
-//     res.send("success :testing");
-// });
 
 
