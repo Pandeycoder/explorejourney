@@ -192,8 +192,9 @@ body{
 .card-body{
     padding:0 !important;
 }
-.card-text p{
-    font-weight: 400 !important;
+.card-text {
+  font-weight: 400 !important;
+  text-align: justify !important;
 }
 .listing-list{
     text-decoration: none;
