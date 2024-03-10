@@ -188,7 +188,11 @@
                                 <%= listing.title %>
                             </b>
                             <br>
-                            &#8377;<%= listing.price.toLocaleString("en-IN") %> /awsome
+                            <b>&#8377;<%= 
+                                ((listing.price*(100-listing.discountPrice))/100).toLocaleString("en-IN")
+                                 %></b> &nbsp;&nbsp;
+                               <del> &#8377;<%= listing.price.toLocaleString("en-IN") %></del> &nbsp; <span style="color: green;"><b><%= listing.discountPrice %>% off</b></span> /awesome
+    
 
                                 <i class="taxt-info">&nbsp;&nbsp; +18% GST</i>
                         </p>

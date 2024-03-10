@@ -82,12 +82,6 @@ const ssessionOptions={
 
 
 
-// //----------------root index page ------------------------
-// app.get("/", (req, res) => {
-
-//     res.send("welcome our website");
-// });
-
 
 
 
