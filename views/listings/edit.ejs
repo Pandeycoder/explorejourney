@@ -43,6 +43,15 @@
 
             </div>
         </div>
+
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">discountPrice</label>
+            <input name="listing[discountPrice]" value="<%= listing.discountPrice %>" type="number" class="form-control" required>
+            <div class="invalid-feedback">price should be valid !
+
+            </div>
+        </div>
+
         <div class="mb-3 col-md-8">
             <label for="country" class="form-label">Country</label>
             <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required>
