@@ -1,70 +1,99 @@
 
-
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i></a> -->
-      
-       <!-- -------------------------update now url------------------------------------------------>
-      <a class="navbar-brand" href="/"><img src="/img/logo.jpg" style="width: 60px; height: 60px; border-radius: 50%;" alt="logo" loading="lazy"/></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          
-       <!-- -------------------------update now url------------------------------------------------>
-          <a class="nav-link" href="/">explore</a>
-        </div>
-
-        <div class="navbar-nav ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 search-input" type="Search" placeholder="Search destination" aria-label="Search" >
-
-            <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-          </form>
-
-        </div>
-
-        <div class="navbar-nav ms-auto">
-           
-       <!-- -------------------------update now url------------------------------------------------>
-          <a class="nav-link" href="/new">journey your home</a>
-          <% if(!currentUser) { %>
-        
-
-            <div class="navbar-nav ms-auto">
-              <form class="d-flex" role="list" onsubmit="showLoginSignup(event)">
-                  <button class="btn btn-list" type="submit"><i class="fa-regular fa-user"></i><i class="fa-solid fa-bars"></i></button>
-              </form>
+<style>
+  .btn-search{
+    background-color: #fe424d;
+    color:#fff;
+    border-radius: 25px;
+   
+  }
+  .btn-search:hover{
+    background-color: #fe424d;
+    color:#fff;
+  }
+  .btn-search i{
+    display: inline;
+    margin-right: 0.75rem;
+  }
+  .search-input{
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.7rem 4rem;
+    font-size: 0.95rem;
+  
+  }
+  
+  .btn-list{
+    background-color: #fff;
+    color:#fff;
+    border-radius: 25px;
+    height: 2.75rem;
+    width: 5rem;
+    padding: 0rem 1rem 0 1rem;
+    border: 1px solid rgb(143, 138, 138);
+    box-shadow: 0 0px 0px black;
+      transition: 0.7s; 
+  }
+  .btn-list:hover{
+    box-shadow: 0 4px 8px #fff;
+    border: 1px solid rgb(150, 143, 143);
+  }
+  .btn-list i{
+    display: inline;
+    color: black;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+  }
+  </style>
+  
+  <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+      <div class="container-fluid">
+         <!-- -------------------------update now------------------------------------------------>
+        <a class="navbar-brand" href="/"><img src="/img/logo.jpg" style="width: 60px; height: 60px; border-radius: 50%;" loading="lazy"/></a>
+         <!-- <a class="navbar-brand" href="/listing"> <i class="fa-regular fa-compass"></i></a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <!-- -------------------------update now------------------------------------------------>
+            <a class="nav-link" href="/">explore</a> 
           </div>
-          <a class="nav-link" id="signupLink" href="/users/signup" style="display: none;"><b>Sign Up</b></a>
-          <a class="nav-link" id="loginLink" href="/users/login" style="display: none;"><b>Log in</b></a>
-          
-          
-          <% } %>
-          <% if(currentUser) { %>
-          <a class="nav-link" href="/users/logout"><b>Log out</b></a>
-          <% } %>
+  
+          <div class="navbar-nav ms-auto">
+            <form class="d-flex input-group" role="search">
+  
+              <input class="form-control search-input" type="Search" placeholder="Search destination" aria-label="Search" >
+        
+              <button class="btn btn-search " type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+  
+          </div>
+  
+          <div class="navbar-nav ms-auto">
+              <!-- -------------------------update now------------------------------------------------>
+            <a class="nav-link" href="/new">jurney your home</a>
+            <% if(!currentUser) { %>
+  
+            <div class="dropdown">
+              <button class="btn btn-list dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="far fa-user"></i><i class="fas fa-bars"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="/user/signup"><b>Sign Up</b></a></li>
+                <li><a class="dropdown-item" href="/user/login"><b>Login</b></a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Help?</a></li>
+              </ul>
+            </div>
+  
+            
+            <% } %>
+            <% if(currentUser) { %>
+            <a class="nav-link" href="/user/logout"><b>Log out</b></a>
+            <% } %>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-
-  
-  <script>
-    function showLoginSignup(event) {
-    event.preventDefault(); // Prevent form submission
-
-    var signupLink = document.getElementById('signupLink');
-    var loginLink = document.getElementById('loginLink');
-
-    if (signupLink.style.display === 'none') {
-        signupLink.style.display = 'inline';
-        loginLink.style.display = 'inline';
-    } else {
-        signupLink.style.display = 'none';
-        loginLink.style.display = 'none';
-    }
-}
-  </script>
+    </nav>
