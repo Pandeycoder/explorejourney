@@ -22,7 +22,14 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Press & Media</a></li>
                         <li><a href="#">Travel Advisor</a></li>
-                        <li><a href="#"> Contact Us</a></li>
+                        <!-- -------------------------update now------------------------------------------------>
+                        <% if(currentUser) { %>
+                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#contactus"> Contact Us</a></li>
+                        <% } %>
+
+                        <% if(!currentUser) { %>
+                            <li><a href="/user/login"> Contact Us</a></li>
+                        <% } %>
                         <li><a href="#">  Careers</a></li>
                     </ul>
                 </div>
@@ -57,6 +64,7 @@
                     <a href="/terms">Terms</a>
                 </div>
             </div>
+            </div>
 
             <div class="f-language">
                 <div class="dropdown">
@@ -71,7 +79,5 @@
                     </ul>
                 </div>
             </div>
-            
-    </div>
     </footer>
 </div>
