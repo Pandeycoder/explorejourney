@@ -7,9 +7,9 @@
             <form action="/users/signup" method="post" novalidate class="needs-validation">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
-                    <div class="input-group">
+                    <div class="input-group user-input-border">
                         <i class="fa-regular fa-user input-group-text"></i>
-                        <input name="username" type="text" class="form-control" autofocus required id="username" />
+                        <input name="username" type="text" class="form-control user-input" required id="username" autofocus />
                         <i class="fa-regular fa-circle-check input-group-text"></i>
                     </div>
                     <div class="valid-feedback"> looks good !</div>
@@ -17,10 +17,29 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <div class="input-group">
+                    <div class="input-group user-input-border">
                         
                      <i class="fa-regular fa-envelope input-group-text"></i>
-                    <input name="email" type="email" class="form-control" required id="email" />
+                    <input name="email" type="email" class="form-control user-input" required id="email" />
+                    <i class="fa-regular fa-circle-check input-group-text"></i>
+                       
+                    </div>
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Mobile Number</label>
+                    <div class="input-group user-input-border">
+
+                        <select name="" id="" class="input-group-tex">
+                            <option value="">Code</option>
+                            <option value="">+91</option>
+
+                            <option value="">+61</option>
+                            <option value="">+1</option>
+                        </select>
+                        
+                     
+                    <input name="email" type="tel" class="form-control user-input" required id="email" />
                     <i class="fa-regular fa-circle-check input-group-text"></i>
                        
                     </div>
@@ -28,10 +47,10 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <div class="input-group">
+                    <label for="password" class="form-label ">Password</label>
+                    <div class="input-group user-input-border">
                         <i class="fa-solid fa-key input-group-text"></i>
-                        <input name="password" type="password" class="form-control" required id="password" />
+                        <input name="password" type="password" class="form-control user-input" required id="password" />
                         <i class="fa-regular fa-circle-check input-group-text"></i>
 
                     </div>

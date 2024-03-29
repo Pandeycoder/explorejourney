@@ -18,8 +18,13 @@
     border-radius: 25px;
     padding: 0.5rem 3rem 0.7rem 4rem;
     font-size: 0.95rem;
+    border: none;
   
   }
+  .search-input:focus {
+              box-shadow: none; /* Remove the box-shadow */
+              border: none;
+          }
   
   .btn-list{
     background-color: #fff;
@@ -59,7 +64,7 @@
             <a class="nav-link" href="/">explore</a> 
           </div>
   
-          <div class="navbar-nav ms-auto">
+          <div class="navbar-nav ms-auto" style="border: 0.01rem solid rgb(134, 129, 129); border-radius: 25px;">
             <form class="d-flex input-group" role="search">
   
               <input class="form-control search-input" type="Search" placeholder="Search destination" aria-label="Search" >
@@ -78,7 +83,7 @@
   
             <div class="dropdown">
               <button class="btn btn-list dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="far fa-user"></i><i class="fas fa-bars"></i>
+                <i class="far fa-user" style="color: black;"></i><i class="fas fa-bars"></i>
               </button>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="/users/signup"><b>Sign Up</b></a></li>
@@ -91,9 +96,26 @@
             
             <% } %>
             <% if(currentUser) { %>
-            <a class="nav-link" href="/users/logout"><b>Log out</b></a>
+  
+              <div class="dropdown">
+                <button class="btn me-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: aqua; border-radius: 50%;">
+                  <i class="far fa-user" style="color: black;"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="/users/signup"><b>Profiles</b></a></li>
+                  <li><a class="dropdown-item" href="/users/logout"><b>Log out</b></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Help?</a></li>
+                </ul>
+              </div>
+  
+  
+            
             <% } %>
           </div>
         </div>
       </div>
     </nav>
+  
+  
+   
