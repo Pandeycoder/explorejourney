@@ -1,108 +1,109 @@
 <% layout("/layouts/bolierplate") %>
- 
-<style>
+    <!-- <h2>All Listings</h2> -->
+    <!-- <form method="get" action="/listing/new" >
+        <button>Create New Listing</button>
+    </form> -->
+    
+    <style>
+        @media screen and (max-width: 768px) {
+         .filters .filter:nth-child(n+6) {
+            display: none;
+        }
+        .card{
+            margin-top: 6rem !important;
+        }
+        }
 
-/*---------------index page listing---------------------------------*/
+        .filters {
 
-@media screen and (max-width: 768px) {
- .filters .filter:nth-child(n+6) {
-    display: none;
-}
-.card{
-    margin-top: 6rem !important;
-}
-}
+            position: fixed;
+            top: 3rem;
+            background-color: #fff;
+            /* Adjust according to your design */
+            padding: 1rem;
+            /* Adjust according to your design */
+            z-index: 1000;
+            /* Adjust according to your design and layout */
+            width: 100%;
+            /* Adjust according to your design */
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
 
-.filters {
+        .filter {
+            text-align: center;
+            margin-right: 1.4rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+            flex-wrap: wrap;
+        }
 
-    position: fixed;
-    top: 3rem;
-    background-color: #fff;
-    /* Adjust according to your design */
-    padding: 1rem;
-    /* Adjust according to your design */
-    z-index: 1000;
-    /* Adjust according to your design and layout */
-    width: 100%;
-    /* Adjust according to your design */
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
 
-.filter {
-    text-align: center;
-    margin-right: 1.4rem;
-    margin-top: 2rem;
-    opacity: 0.7;
-    flex-wrap: wrap;
-}
+        .filter p {
+            font-size: 0.8rem;
+        }
 
-.filter:hover {
-    opacity: 1;
-    cursor: pointer;
-}
+        .taxt-info {
+            display: none;
+        }
 
-.filter p {
-    font-size: 0.8rem;
-}
+        .tax-toggle {
+            border: 1px solid black;
+            border-radius: 1rem;
+            height: 3.25rem;
+            padding: 1rem;
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+        }
 
-.taxt-info {
-    display: none;
-}
+        .ourjourney-main
+        {
+            background-color:#F4F2EF;;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+           
+        }
+        .home-title{
+            text-align: center;
+            color:#866D4B;
+        }
+        .item--icon{
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .item--icon i{
+            font-size: 20px;
+            padding: 0.55rem;
+            align-items: center;
+            text-align: center; 
+        }
 
-.tax-toggle {
-    border: 1px solid black;
-    border-radius: 1rem;
-    height: 3.25rem;
-    padding: 1rem;
-    margin-left: 2rem;
-    display: flex;
-    align-items: center;
-}
-
-.ourjourney-main
-{
-    background-color:#F4F2EF;;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-   
-}
-.home-title{
-    text-align: center;
-    color:#866D4B;
-}
-.item--icon{
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 50%;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.item--icon i{
-    font-size: 20px;
-    padding: 0.55rem;
-    align-items: center;
-    text-align: center; 
-}
-
-
- /*================= contact section starts here ================/ */
+        /*================= contact section starts here ================/ */
         .modal-content {
-            
+            color: black;
+            background-color: #fff;
             width: 100%;
             margin: 0 auto;
 
             transition: background 0.5s, transform 0.5s;
 
-            box-shadow: 1px 1px 20px black,
-                1px 1px 40px black;
+            box-shadow: 1px 1px 20px rgb(19, 18, 18),
+                1px 1px 40px rgb(5, 5, 5);
         }
         .modal-content:hover {
             transform: translate(-10px);
@@ -116,9 +117,9 @@
         }
 
         .send-msg:hover {
-            box-shadow: 0 0 5px green,
-                0 0 25px green, 0 0 50px green,
-                0 0 100px green, 0 0 200px green !important;
+            box-shadow: 0 0 5px cyan,
+                0 0 25px cyan, 0 0 50px cyan,
+                0 0 100px cyan, 0 0 200px cyan !important;
             color: white !important;
             background-color: #0ef;
         }
@@ -158,7 +159,7 @@
 
 100% {
     transform: translateY(0px);
-    opacity: 0.5;
+    opacity: 1;
 }
 }
 
@@ -207,9 +208,40 @@
                 margin-top: 1.8rem !important;
             }
         }
-    
 
-</style>
+
+        .circle-indicator {
+            display: inline-block;
+            width: 10px; /* Adjust size of the circle */
+            height: 10px; /* Adjust size of the circle */
+            border-radius: 50%; /* Make it a circle */
+            background-color: #6c757d; /* Color of inactive circle */
+            margin: 0 ; /* Adjust spacing between circles */
+        }
+        
+        .carousel-indicators button {
+            border: none;
+            width: 0px;
+            height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Hide the carousel control buttons by default */
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+        
+        /* Show carousel control buttons on hover */
+        .carousel:hover .carousel-control-prev,
+        .carousel:hover .carousel-control-next {
+            display: block;
+        }
+        
+ 
+    
+    </style>
     
     <div class="filters pb-1">
         <div class="filter">
@@ -294,11 +326,37 @@
 
 
                 <div class="card col listing-card">
-                    <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
-                        style="height: 20rem;" loading="lazy"/>
 
-                    <div class="card-img-overlay"></div>
 
+                    <div class="carousel slide mt-3" data-bs-ride="carousel" id="banner">
+                        <div class="carousel-indicators">
+                            <button data-bs-slide-to="0" class="active mb-3 me-3" style="border: none; width: 0px; height:0px;">
+                                <span class="circle-indicator"></span>
+                            </button>
+                            <button data-bs-slide-to="1" class=" me-3" style="border: none; width: 0px; height:0px;">
+                                <span class="circle-indicator"></span>
+                            </button>
+                            <button data-bs-slide-to="2"  style="border: none; width: 0px; height:0px;">
+                                <span class="circle-indicator"></span>
+                            </button>
+                           
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="2000">
+                                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
+                                style="height: 20rem;" loading="lazy"/>
+                                <div class="card-img-overlay"></div>
+        
+                            </div>
+                           
+                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner">
+                                <span class="carousel-control-prev-icon btn btn-danger" style="border-radius: 50%;"></span>
+                            </button>
+                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banner">
+                                <span class="carousel-control-next-icon btn btn-success" style="border-radius: 50%; font-size: 5px !important;"></span>
+                            </button>
+                        </div>
+                    </div>
                     <div class="card-body">
                         <p class="card-text">
                             <b>
@@ -306,10 +364,9 @@
                             </b>
                             <br>
                             <b>&#8377;<%= 
-                                ((listing.price*(100-listing.discountPrice))/100).toLocaleString("en-IN")
-                                 %></b> &nbsp;&nbsp;
-                               <del> &#8377;<%= listing.price.toLocaleString("en-IN") %></del> &nbsp; <span style="color: green;"><b><%= listing.discountPrice %>% off</b></span> /awesome
-    
+                            ((listing.price*(100-listing.discountPrice))/100).toLocaleString("en-IN")
+                             %></b> &nbsp;&nbsp;
+                           <del> &#8377;<%= listing.price.toLocaleString("en-IN") %></del> &nbsp; <span style="color: green;"><b><%= listing.discountPrice %>% off</b></span> /awesome
 
                                 <i class="taxt-info">&nbsp;&nbsp; +18% GST</i>
                         </p>
@@ -333,7 +390,7 @@
 
                 <div class="col item mb-5">
                     <div class="item--icon">
-                       <p><i class="fa-solid fa-champagne-glasses"></i></p> 
+                       <p><i class="fa-solid fa-champagne-glasses" style="color: rgb(168, 112, 15);" ></i></p> 
                     </div>
                     <div class="item-text mt-4">
                         <p>In-suite welcome bottle of champagne and sweet treats</p>
@@ -355,7 +412,7 @@
 
                 <div class="col item">
                     <div class="item--icon">
-                        <p><i class="fa-solid fa-users"></i></p>
+                        <p><i class="fa-solid fa-users" style="color: rgb(21, 21, 116);"></i></p>
                     </div>
 
                     <div class="item-text mt-4">
@@ -379,7 +436,7 @@
 
                 <div class="col item">
                     <div class="item--icon">
-                        <p><i class="fa-solid fa-spa"></i></p>
+                        <p><i class="fa-solid fa-spa" style="color:green"></i></p>
                     </div>
 
                     <div class="item-text mt-4">
@@ -417,7 +474,7 @@
 
                 <div class="col item">
                     <div class="item--icon">
-                        <p><i class="fa-solid fa-wifi"></i></i></p>
+                        <p><i class="fa-solid fa-wifi" style="color: blue;"></i></i></p>
                     </div>
 
                     <div class="item-text mt-4">
@@ -441,7 +498,7 @@
 
                 <div class="col item">
                     <div class="item--icon">
-                        <p><i class="fa-solid fa-heart-pulse"></i></p>
+                        <p><i class="fa-solid fa-heart-pulse" style="color: red;"></i></p>
                     </div>
 
                     <div class="item-text mt-4">
@@ -453,7 +510,6 @@
             </div>
         </section>
     </div>
-
 
 
     <section id="contact" class="contact-section mt-5 ">
@@ -471,14 +527,18 @@
                     </div>
 
                     <div class="modal-body">
-                        <input autofocus class="form-control mb-3 contact-input" placeholder="Your Name" type="text" />
+                        <form action="" class="form-control" style="border: none;">
+                        <input autofocus class="form-control mb-3 contact-input " placeholder="Your Name" type="text" />
                         <input class="form-control mb-3 contact-input" placeholder="Your Email" type="email">
+                        <input class="form-control mb-3 contact-input" minlength="5" maxlength="10" placeholder="mobile number" type="tel" required>
                         <input class="form-control mb-3 contact-input" placeholder="subject" type="text"> <textarea
                             class="form-control mb-3 contact-input" placeholder="Message" name="text" id="" cols="30"
                             rows="5"></textarea>
 
-                        <button class=" rounded-pill text-white btn font-weight-bolder send-msg mt-2 "><span
+                        <button class=" rounded-pill text-white btn font-weight-bolder send-msg mt-2 " type="submit"><span
                                 class="bi bi-send"> </span>Send Message</button>
+
+                            </form>
 
                         <!-- <div class="col-md-6 touch-control"> 
                 <h3 class="mb-lg-4 mt-4 mt-md-0  font-weight-bolder contact-heading1"><span class="bi bi-fingerprint touch"></span> Get in <span style="color:#0ef">Touch</span></h3> 
