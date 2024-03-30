@@ -248,7 +248,7 @@
                        <i class="fa-regular fa-heart position-absolute end-0 top-0 m-3" ></i>
 
 
-                    <div class="carousel slide mt-3"  id="banner">
+                    <div class="carousel slide mt-3"  id="banner_<%= listing._id %>">
                         <div class="carousel-indicators">
                             <button data-bs-slide-to="0" class="active mb-3 me-3" style="border: none; width: 0px; height:0px;">
                                 <span class="circle-indicator"></span>
@@ -273,10 +273,10 @@
                                 <div class="card-img-overlay"></div>
                             </div>
                            
-                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner">
+                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner_<%= listing._id %>">
                                 <span class="carousel-control-prev-icon btn btn-danger" style="border-radius: 50%;"></span>
                             </button>
-                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banner">
+                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banner_<%= listing._id %>">
                                 <span class="carousel-control-next-icon btn btn-success" style="border-radius: 50%; font-size: 5px !important;"></span>
                             </button>
                         </div>
