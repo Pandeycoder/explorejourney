@@ -1,121 +1,185 @@
-
 <style>
-  .btn-search{
+  .btn-search {
     background-color: #fe424d;
-    color:#fff;
+    color: #fff;
     border-radius: 25px;
-   
+
   }
-  .btn-search:hover{
+
+  .btn-search:hover {
     background-color: #fe424d;
-    color:#fff;
+    color: #fff;
   }
-  .btn-search i{
+
+  .btn-search i {
     display: inline;
     margin-right: 0.75rem;
   }
-  .search-input{
+
+  .search-input {
     border-radius: 25px;
     padding: 0.5rem 3rem 0.7rem 4rem;
     font-size: 0.95rem;
     border: none;
-  
+
   }
+
   .search-input:focus {
-              box-shadow: none; /* Remove the box-shadow */
-              border: none;
-          }
-  
-  .btn-list{
+    box-shadow: none;
+    /* Remove the box-shadow */
+    border: none;
+  }
+
+  .btn-list {
     background-color: #fff;
-    color:#fff;
+    color: #fff;
     border-radius: 25px;
     height: 2.75rem;
     width: 5rem;
     padding: 0rem 1rem 0 1rem;
     border: 1px solid rgb(143, 138, 138);
     box-shadow: 0 0px 0px black;
-      transition: 0.7s; 
+    transition: 0.7s;
   }
-  .btn-list:hover{
+
+  .btn-list:hover {
     box-shadow: 0 4px 8px #fff;
     border: 1px solid rgb(150, 143, 143);
   }
-  .btn-list i{
+
+  .btn-list i {
     display: inline;
     color: black;
     margin-right: 1rem;
     font-size: 1.25rem;
   }
-  </style>
-  
-  <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-      <div class="container-fluid">
-         <!-- -------------------------update now------------------------------------------------>
-        <a class="navbar-brand" href="/"><img src="/img/logo.jpg" style="width: 60px; height: 60px; border-radius: 50%;" loading="lazy"/></a>
-         <!-- <a class="navbar-brand" href="/listing"> <i class="fa-regular fa-compass"></i></a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <!-- -------------------------update now------------------------------------------------>
-            <a class="nav-link" href="/">explore</a> 
-          </div>
-  
-          <div class="navbar-nav ms-auto" style="border: 0.01rem solid rgb(134, 129, 129); border-radius: 25px;">
-            <form class="d-flex input-group" role="search">
-  
-              <input class="form-control search-input" type="Search" placeholder="Search destination" aria-label="Search" >
-        
-              <button class="btn btn-search " type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-  
-          </div>
-  
-          <div class="navbar-nav ms-auto">
-              <!-- -------------------------update now------------------------------------------------>
-            <a class="nav-link" href="/new">jurney your home</a>
-            <% if(!currentUser) { %>
-  
-            <div class="dropdown">
-              <button class="btn btn-list dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="far fa-user" style="color: black;"></i><i class="fas fa-bars"></i>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="/users/signup"><b>Sign Up</b></a></li>
-                <li><a class="dropdown-item" href="/users/login"><b>Login</b></a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Help?</a></li>
-              </ul>
-            </div>
-  
+
+  .title,
+  .title1 {
+    font-size: 15px !important;
+    color: rgb(0, 204, 255);
+    text-shadow: 4px 4px 6px pink;
+    font-family: Arial;
+    font-weight: bold;
+
+  }
+
+  .title1:hover {
+    background-color: #7FFFD4;
+    border-radius: 10px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- -------------------------update now------------------------------------------------>
+    <a class="navbar-brand" href="/"><img src="/img/logo.jpg"
+        style="width: 60px; height: 60px; border-radius: 50%;" loading="lazy" /></a>
+    <!-- <a class="navbar-brand" href="/listing"> <i class="fa-regular fa-compass"></i></a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <!-- -------------------------update now------------------------------------------------>
+        <a class="nav-link" href="/">
+          <div class="title">
             
-            <% } %>
+
+            <font color="red" size="5">e</font>
+            <font color="red" size="5">x</font>
+            <font color="red" size="3">p</font>
+            <font color="red" size="3">l</font>
+            <font color="red" size="3">o</font>
+            <font color="red" size="5">r</font>
+            <font color="red" size="5">e</font>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-nav ms-auto" style="border: 0.01rem solid rgb(134, 129, 129); border-radius: 25px;">
+        <form class="d-flex input-group" role="search">
+
+          <input class="form-control search-input" type="Search" placeholder="Search destination" aria-label="Search">
+
+          <button class="btn btn-search " type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <!-- -------------------------update now------------------------------------------------>
+        <a class="nav-link" href="/new">
+          <!-- 𝖗  𝖇 𝖋𝖊𝖆𝖙𝖚𝖗𝖊 𝖔𝖓 𝖞𝖔𝖚𝖗 𝕭𝖑𝖔𝖌  𝖋𝖊𝖆𝖙𝖚𝖗𝖊 𝕺𝖓 𝖄𝖔𝖚𝖗 𝕭𝖑𝖔𝖌 𝖋𝖊𝖆𝖙𝖚𝖗𝖊 𝕺𝖜𝖓 𝖄𝖔𝖚𝖗 𝕭𝖑𝖔𝖌-->
+
+
+          <div class="title1">
+
+            <font color="#8B0000" size="5">𝖋</font>
+            <font color="#8B0000" size="5">𝖊</font>
+            <font color="#8B0000" size="3">𝖆</font>
+            <font color="#8B0000" size="3">𝖙</font>
+            <font color="#8B0000" size="3">𝖚</font>
+            <font color="#8B0000" size="3">𝖗</font>
+            <font color="#8B0000" size="3">𝖊</font>
+            <font color="#000080" size="5">𝕺</font>
+            <font color="#000080" size="3">𝖜</font>
+            <font color="#000080" size="3">𝖓</font>
+            <font color="#228B22" size="5">𝖄</font>
+            <font color="#228B22" size="3">𝖔</font>
+            <font color="#228B22" size="3">𝖚</font>
+            <font color="#228B22" size="3">𝖗</font>
+            <font color="#2F4F4F" size="5">𝕭</font>
+            <font color="#2F4F4F" size="3">𝖑</font>
+            <font color="#2F4F4F" size="3">𝖔</font>
+            <font color="#2F4F4F" size="3">𝖌</font>
+
+          </div>
+        </a>
+
+
+        <% if(!currentUser) { %>
+
+          <div class="dropdown">
+            <button class="btn btn-list dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="far fa-user" style="color: black;"></i><i class="fas fa-bars"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="/users/signup"><b>Sign Up</b></a></li>
+              <li><a class="dropdown-item" href="/users/login"><b>Login</b></a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Help?</a></li>
+            </ul>
+          </div>
+
+
+          <% } %>
             <% if(currentUser) { %>
-  
+
               <div class="dropdown">
-                <button class="btn me-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: aqua; border-radius: 50%;">
+                <button class="btn me-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                  aria-expanded="false" style="background-color: aqua; border-radius: 50%;">
                   <i class="far fa-user" style="color: black;"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                   <li><a class="dropdown-item" href="/users/signup"><b>Profiles</b></a></li>
                   <li><a class="dropdown-item" href="/users/logout"><b>Log out</b></a></li>
-                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
                   <li><a class="dropdown-item" href="#">Help?</a></li>
                 </ul>
               </div>
-  
-  
-            
-            <% } %>
-          </div>
-        </div>
+
+
+
+              <% } %>
       </div>
-    </nav>
-  
-  
-   
+    </div>
+  </div>
+</nav>

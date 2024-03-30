@@ -93,17 +93,6 @@
             text-align: center; 
         }
 
-      
-
-
-        .circle-indicator {
-            display: inline-block;
-            width: 10px; /* Adjust size of the circle */
-            height: 10px; /* Adjust size of the circle */
-            border-radius: 50%; /* Make it a circle */
-            background-color: #6c757d; /* Color of inactive circle */
-            margin: 0 ; /* Adjust spacing between circles */
-        }
         
         .carousel-indicators button {
             border: none;
@@ -128,6 +117,37 @@
  .carousel-indicators .active .circle-indicator {
     background-color: white; /* Color of active circle */
   }
+
+  .fa-heart {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    padding-top: 1rem;
+    right: 0;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    z-index: 1;
+}
+.fa-share
+{
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    padding-top: 1.3rem;
+    left: 0;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    z-index: 1;
+}
+
+.listing-card:hover .fa-heart {
+    color: white; /* Change the color on hover */
+    font-size: 28px; /* Increase the font size on hover */
+}
+.share-icon:hover .fa-share {
+    color: rgb(41, 72, 226); /* Change the color on hover */
+    font-size: 28px; /* Increase the font size on hover */
+}
+
+
     
     </style>
     
@@ -207,16 +227,21 @@
             </div>
         </div>
     </div><br><br>
+
+   
+
 <div class="container">
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-5 ">
         <% for( listing of allListings) { %>
             <a href="/<%= listing._id %>" class="listing-list">
-
-
-                <div class="card col listing-card">
-
-
-                    <div class="carousel slide mt-3" data-bs-ride="carousel" id="banner">
+                <div class="card col listing-card  position-relative">
+                  
+                        <div class="share-icon">
+                            <i class="fa-solid fa-share  position-absolute end-0 top-0 m-1"></i>
+                        </div>
+                    
+                    <i class="fa-regular fa-heart position-absolute end-0 top-0 m-3" ></i>
+                    <div class="carousel slide mt-3" id="banner_<%= listing._id %>">
                         <div class="carousel-indicators">
                             <button data-bs-slide-to="0" class="active mb-3 me-3" style="border: none; width: 0px; height:0px;">
                                 <span class="circle-indicator"></span>
@@ -227,20 +252,24 @@
                             <button data-bs-slide-to="2"  style="border: none; width: 0px; height:0px;">
                                 <span class="circle-indicator"></span>
                             </button>
-                           
                         </div>
+
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="2000">
+                            <div class="carousel-item active" data-bs-interval="false">
                                 <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
                                 style="height: 20rem;" loading="lazy"/>
                                 <div class="card-img-overlay"></div>
-        
+                            </div>
+                            <div class="carousel-item active" data-bs-interval="flase">
+                                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
+                                style="height: 20rem;" loading="lazy"/>
+                                <div class="card-img-overlay"></div>
                             </div>
                            
-                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner">
+                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner_<%= listing._id %>">
                                 <span class="carousel-control-prev-icon btn btn-danger" style="border-radius: 50%;"></span>
                             </button>
-                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banner">
+                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banner_<%= listing._id %>">
                                 <span class="carousel-control-next-icon btn btn-success" style="border-radius: 50%; font-size: 5px !important;"></span>
                             </button>
                         </div>
@@ -274,7 +303,7 @@
             <div class="home-title mt-5">
                 <h1>All our journeys include:</h1>
             </div>
-            <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 mt-5 p-5">
+            <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 mt-5 p-1">
 
                 <div class="col item mb-5">
                     <div class="item--icon">
@@ -399,8 +428,77 @@
         </section>
     </div>
 
+    <main class="d-flex justify-content-center align-items-center text-start mt-1 " style="background-color: #ebebeb;
+    ">
+        <div style="width: 600px">
+            <div class="accordion" id="faq">
+                <div class="accordion-item mb-3">
+                    <div class="accordion-header bg-dark text-white p-3 d-flex justify-content-between">
+                        <div>
+                            <h3>Seeking inspiration for your next adventure? </h3>
+                        </div>
+                      <div>
+                        <button class="btn btn-dark text-white w-100" data-bs-toggle="collapse" data-bs-target="#css">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+    
+                    <div class="accordion-body bg-dark text-white  accordion-collapse collapse show" data-bs-parent="#faq" id="css">
+                        <p>Our curated collection features a diverse range of journeys spanning breathtaking landscapes, vibrant cultures, and immersive experiences. Whether you're dreaming of exploring ancient ruins, relaxing on pristine beaches, or embarking on thrilling outdoor adventures, you'll find inspiration to fuel your wanderlust right here.</p>
+                    </div>
+                </div>
+    
+                <div class="accordion-item mb-3">
+    
+                    <div class="accordion-header bg-dark text-white p-3 d-flex justify-content-between">
+                        <div>
+                            <h3>Wondering how to plan your dream getaway?</h3>
+                        </div>
+                        <div>
+                            <button class="btn btn-dark w-100" data-bs-toggle="collapse" data-bs-target="#html">
+                           
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="accordion-body bg-dark text-white accordion-collapse collapse" id="html" data-bs-parent="#faq">
+                        <p>Planning your dream getaway is easier than you think! Our platform offers valuable insights and recommendations from seasoned travelers and industry experts. From destination guides and travel hacks to packing tips and budgeting advice, we've got you covered every step of the way.</p>
+                    </div>
+                </div>
+    
+                <div class="accordion-item">
+                    <div class="accordion-header bg-dark text-white p-3 d-flex justify-content-between">
+    
+                        <div>
+                            <h3>Ready to embark on a new adventure? </h3>
+                        </div>
+    
+                        <div>
+                            <button class="btn btn-dark w-100" data-bs-toggle="collapse" data-bs-target="#js">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+    
+                        </div>
+                        
+                    </div>
+                    <div class="accordion-body bg-dark text-white  accordion-collapse collapse" id="js" data-bs-parent="#faq">
+                        <div style="width: 600px; text-align: justify;">
+                            <p>Embarking on a new adventure has never been more exciting! Our platform provides personalized travel experiences tailored to your unique interests and preferences. Whether you're a foodie seeking culinary delights, an adrenaline junkie craving thrilling activities, or a culture enthusiast eager to immerse yourself in local traditions, we'll help you create unforgettable memories.</p>
 
-  
+                        </div>
+                        
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    </main>
+
+
+    
+
 
 
 

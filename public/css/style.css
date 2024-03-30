@@ -244,3 +244,20 @@ body{
     height: 340px;
     width: 80vh;
   }
+
+   /* user login*/
+   .user-input
+   {
+       border: none;
+   }
+   .user-input:focus
+   {
+       box-shadow: none;
+       border: none;
+   }
+   .user-input-border
+   {
+       border: 0.01rem solid rgb(150, 144, 144);
+       border-radius: 7px;
+ 
+   }
