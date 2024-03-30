@@ -129,6 +129,34 @@
     background-color: white; /* Color of active circle */
   }
     
+  .fa-heart {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    padding-top: 1rem;
+    right: 0;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    z-index: 1;
+}
+.fa-share
+{
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    padding-top: 1.3rem;
+    left: 0;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    z-index: 1;
+}
+
+.listing-card:hover .fa-heart {
+    color: white; /* Change the color on hover */
+    font-size: 28px; /* Increase the font size on hover */
+}
+.share-icon:hover .fa-share {
+    color: rgb(41, 72, 226); /* Change the color on hover */
+    font-size: 28px; /* Increase the font size on hover */
+}
     </style>
     
     <div class="filters pb-1">
@@ -213,10 +241,14 @@
             <a href="/<%= listing._id %>" class="listing-list">
 
 
-                <div class="card col listing-card">
+                <div class="card col listing-card  position-relative">
+                    <div class="share-icon">
+                        <i class="fa-solid fa-share  position-absolute end-0 top-0 m-1"></i>
+                    </div>
+                       <i class="fa-regular fa-heart position-absolute end-0 top-0 m-3" ></i>
 
 
-                    <div class="carousel slide mt-3" data-bs-ride="carousel" id="banner">
+                    <div class="carousel slide mt-3"  id="banner">
                         <div class="carousel-indicators">
                             <button data-bs-slide-to="0" class="active mb-3 me-3" style="border: none; width: 0px; height:0px;">
                                 <span class="circle-indicator"></span>
@@ -230,11 +262,15 @@
                            
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="2000">
+                            <div class="carousel-item active" data-bs-interval="false">
                                 <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
                                 style="height: 20rem;" loading="lazy"/>
                                 <div class="card-img-overlay"></div>
-        
+                            </div>
+                            <div class="carousel-item " data-bs-interval="false">
+                                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
+                                style="height: 20rem;" loading="lazy"/>
+                                <div class="card-img-overlay"></div>
                             </div>
                            
                             <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner">
