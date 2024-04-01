@@ -10,7 +10,7 @@
                     <label for="username" class="form-label">Username</label><br>
                     <div class="input-group user-input-border">
                         <i class="fa-regular fa-user input-group-text"></i>
-                        <input name="username" type="text" class="form-control user-input" required id="username" autofocus />
+                        <input name="username" type="text" class="form-control user-input" placeholder="username" required id="username" autofocus />
                         <i class="fa-regular fa-circle-check input-group-text"></i>
                     </div>
                    
@@ -19,12 +19,26 @@
                     <label for="password" class="form-label">Password</label>
                     <div class="input-group  user-input-border">
                         <i class="fa-solid fa-key input-group-text"></i>
-                        <input name="password" type="password" class="form-control user-input" required id="password" />
+                        <input name="password" type="password" class="form-control user-input" placeholder="password" required id="password" />
                         <i class="fa-regular fa-circle-check input-group-text"></i>
 
                     </div>
                 </div>
+                <div class="mb-3" style="display: flex; flex-wrap: wrap;">
+                    
+                        <input type="checkbox" for="chk1" class="form-check-input" style="background-color: rgb(219, 213, 213);">
+                        <label for="chk1" class="form-label text-sm mx-2"><b>Remember me</b></label>
+                    
+                    
+                         <a href="" class="mx-auto" style="color: #ec2025;">Forgot Password?</a>
+                    
+                  
+                </div>
                 <button class="btn btn-success">Login</button>
             </form>
+            <div class="mt-2" style="display: flex;">
+                <p class="me-2">Don't have an account?</p> <a href="/users/SignUp" style="color:#ec2025;" class="ml-1"> Register</a>
+            </div>
+            
         </div>
     </div>
