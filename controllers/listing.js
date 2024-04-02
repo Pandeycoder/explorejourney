@@ -2,19 +2,35 @@ const Listing = require("../models/listing");
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
-
+let totalRequest = 0;
 
 module.exports.index = async (req, res) => {
-
+    /* ..................log request info..................................*/
     let requestCounter = 0;
     requestCounter++;
-    // Log the request information
+    totalRequest++;
     console.log(`Request ${requestCounter}: ${req.method} ${req.url}`);
+    console.log(`total request right now : ${totalRequest}`);
+
+    const userAgent = req.headers['user-agent'];
+    let deviceType = 'Unknown';
+    if (userAgent.includes('Mobile')) {
+        deviceType = 'Mobile';
+    } else if (userAgent.includes('Tablet')) {
+        deviceType = 'Tablet';
+    } else {
+        deviceType = 'Desktop';
+    }
     const ip = req.ip || req.connection.remoteAddress;
-    console.log(`Request from IP: ${ip}`);
+    console.log(`Request from IP ${ip} - Device Type: ${deviceType}`);
+    console.log(`User-Agent: ${userAgent}`);
+    console.log("\n");
+     /* .................... end !..................................*/
+
 
     const allListings = await Listing.find({});
-    // const canonicalUrl = 'https://explorejourney.onrender.com';,{ canonical: canonicalUrl }
+
+
     res.render("listings/index.ejs", { allListings });
 };
 
