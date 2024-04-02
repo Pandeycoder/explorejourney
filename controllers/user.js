@@ -15,9 +15,15 @@ module.exports.userSignup=async (req, res) => {
 
     try {
         let { username, email, password } = req.body;
+         const existingUser = await User.findOne({ email: email });
+        if (existingUser) {
+            req.flash("error", "Email address is already in use. Please choose a different email");
+            return res.redirect("/user/signup");
+        }
         const newUser = new User({ email, username });
         const registeredUser = await User.register(newUser, password);
-        
+        console.log("email id users: ",email);
+        console.log("password user :",password);
 
         req.login(registeredUser,(err)=>{
 
@@ -35,8 +41,8 @@ module.exports.userSignup=async (req, res) => {
 
         
     } catch (e) {
-        req.flash("error", e.message);
-        res.redirect("/users/signup");
+            req.flash("error", e.message);
+            res.redirect("/user/signup");
 
     }
 
@@ -53,7 +59,9 @@ module.exports.renderLogin=(req, res) => {
  //-----------------------login controller--------
 
  module.exports.login=async (req, res) => {
-
+    let {  email, password } = req.body;
+    console.log("email id users: ",email);
+    console.log("password user :",password);
     req.flash("success","Welcome back to explorejurney !")
     
    // <!-- -------------------------update now url------------------------------------------------>
