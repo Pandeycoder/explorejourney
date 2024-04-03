@@ -1,8 +1,8 @@
 <div class="footer-dark">
 
     <style>
-          /*================= contact section starts here ================/ */
-          .modal-content {
+        /*================= contact section starts here ================/ */
+        .modal-content {
             color: black;
             background-color: #fff;
             width: 100%;
@@ -13,9 +13,11 @@
             box-shadow: 1px 1px 20px rgb(19, 18, 18),
                 1px 1px 40px rgb(5, 5, 5);
         }
+
         .modal-content:hover {
             transform: translate(-10px);
         }
+
         .send-msg {
             color: #fff !important;
             background-color: green;
@@ -31,18 +33,21 @@
             color: white !important;
             background-color: #0ef;
         }
+
         .send-msg {
 
             opacity: 0;
             animation: slideTop 1s ease forwards;
             animation-delay: 3s;
         }
+
         .contact-heading {
             opacity: 0;
             animation: slideButtom2 1s ease forwards;
             animation-delay: 1s;
 
         }
+
         .contact-input {
             opacity: 0;
             animation: slideButtom1 1s ease forwards;
@@ -50,6 +55,7 @@
             color: #081b29;
             border-radius: 10px;
         }
+
         .contact-input {
             opacity: 0
         }
@@ -60,42 +66,42 @@
 
         @keyframes slideButtom1 {
 
-0% {
-    transform: translateX(-100px);
-    opacity: 0;
-}
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
 
-100% {
-    transform: translateY(0px);
-    opacity: 1;
-}
-}
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
 
-@keyframes slideTop {
+        @keyframes slideTop {
 
-0% {
-    transform: translateY(-100px);
-    opacity: 0;
-}
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
 
-100% {
-    transform: translateX(0px);
-    opacity: 1;
-}
-}
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
 
-@keyframes slideButtom2 {
+        @keyframes slideButtom2 {
 
-0% {
-    transform: translateY(300px);
-    opacity: 0;
-}
+            0% {
+                transform: translateY(300px);
+                opacity: 0;
+            }
 
-100% {
-    transform: translateX(0px);
-    opacity: 1;
-}
-}
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
 
         @media (max-width: 1024px) {
 
@@ -115,6 +121,21 @@
             .send-msg {
                 margin-top: 1.8rem !important;
             }
+        }
+
+
+        .circle-indicator {
+            display: inline-block;
+            width: 10px;
+            /* Adjust size of the circle */
+            height: 10px;
+            /* Adjust size of the circle */
+            border-radius: 50%;
+            /* Make it a circle */
+            background-color: #6c757d;
+            /* Color of inactive circle */
+            margin: 0;
+            /* Adjust spacing between circles */
         }
     </style>
     <footer>
@@ -138,14 +159,10 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Press & Media</a></li>
                         <li><a href="#">Travel Advisor</a></li>
+
                         <!-- -------------------------update now------------------------------------------------>
 
-
-
-
-                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#contactus">
-                             Contact Us</a></li>
-
+                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#contactus"> Contact Us</a></li>
 
 
                         <li><a href="#"> Careers</a></li>
@@ -184,27 +201,24 @@
                     <a href="/terms">Terms</a>
                 </div>
             </div>
-        
 
-        <div class="f-language">
-            <div class="dropdown">
-                <button class="dropdown-toggle btn btn-secondary" type="button" id="languageDropdown"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-globe me-2"></i>Language
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                    <li><a class="dropdown-item" href="#">English</a></li>
-                    <li><a class="dropdown-item" href="#">हिन्दी</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Help?</a></li>
-                </ul>
+            <div class="f-language">
+                <div class="dropdown">
+                    <button class="dropdown-toggle btn btn-secondary" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe me-2"></i>Language
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">हिन्दी</a></li>
+                    </ul>
+                </div>
             </div>
+
         </div>
-    </div>
     </footer>
 </div>
+
 <section id="contact" class="contact-section mt-5 ">
     <div class="row modal fade " id="contactus">
         <div class="col-md-6 modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -221,28 +235,21 @@
 
                 <div class="modal-body">
                     <form action="" class="form-control" style="border: none;">
-                    <input autofocus class="form-control mb-3 contact-input " placeholder="Your Name" type="text" />
-                    <input class="form-control mb-3 contact-input" placeholder="Your Email" type="email">
-                    <input class="form-control mb-3 contact-input" minlength="5" maxlength="10" placeholder="mobile number" type="tel" required>
-                    <input class="form-control mb-3 contact-input" placeholder="subject" type="text"> <textarea
-                        class="form-control mb-3 contact-input" placeholder="Message" name="text" id="" cols="30"
-                        rows="5"></textarea>
+                        <input autofocus class="form-control mb-3 contact-input " placeholder="Your Name" type="text" />
+                        <input class="form-control mb-3 contact-input" placeholder="Your Email" type="email">
+                        <input class="form-control mb-3 contact-input" minlength="5" maxlength="10"
+                            placeholder="mobile number" type="tel" required>
+                        <input class="form-control mb-3 contact-input" placeholder="subject" type="text"> <textarea
+                            class="form-control mb-3 contact-input" placeholder="Message" name="text" id="" cols="30"
+                            rows="5"></textarea>
 
-                    <button class=" rounded-pill text-white btn font-weight-bolder send-msg mt-2 " type="submit"><span
-                            class="bi bi-send"> </span>Send Message</button>
+                        <button class=" rounded-pill text-white btn font-weight-bolder send-msg mt-2 "
+                            type="submit"><span class="bi bi-send"> </span>Send Message</button>
 
-                        </form>
-
-                    <!-- <div class="col-md-6 touch-control"> 
-            <h3 class="mb-lg-4 mt-4 mt-md-0  font-weight-bolder contact-heading1"><span class="bi bi-fingerprint touch"></span> Get in <span style="color:#0ef">Touch</span></h3> 
-            <p class="contact-para ">I'd love to hear from you! Feel free to reach out using the contact form below or connect with me via email or social media. Whether it's discussing a project, sharing feedback, or exploring potential opportunities, I'm here to listen and respond promptly. Looking forward to connecting with you!</p> 
-            </div>
-            <div class="home-sci1">
-              <a href="mailto:rahulofficial8474@gmail.com" class="contact-input1"> <span class="bi bi-envelope-arrow-up" style="color: #0ef;"></span>&nbsp; rahulofficial8474@gmail.com</a><br>
-              <a href="tel:6203964461" class="contact-input1" > <span class="bi bi-telephone-outbound-fill" style="color: #0ef;"></span>&nbsp; 6203964461</a>
-            </div> -->
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section> <!-- contact section ends here -->
+

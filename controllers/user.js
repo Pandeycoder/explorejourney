@@ -18,7 +18,7 @@ module.exports.userSignup=async (req, res) => {
          const existingUser = await User.findOne({ email: email });
         if (existingUser) {
             req.flash("error", "Email address is already in use. Please choose a different email");
-            return res.redirect("/user/signup");
+            return res.redirect("/users/signup");
         }
         const newUser = new User({ email, username });
         const registeredUser = await User.register(newUser, password);
@@ -42,7 +42,7 @@ module.exports.userSignup=async (req, res) => {
         
     } catch (e) {
             req.flash("error", e.message);
-            res.redirect("/user/signup");
+            res.redirect("/users/signup");
 
     }
 
