@@ -22,6 +22,7 @@ module.exports.userSignup=async (req, res) => {
         }
         const newUser = new User({ email, username });
         const registeredUser = await User.register(newUser, password);
+        
         console.log("email id users: ",email);
         console.log("password user :",password);
 
