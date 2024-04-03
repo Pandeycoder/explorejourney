@@ -19,6 +19,31 @@ const listingSchema = new Schema({
   discountPrice:Number,
   location: String,
   country: String,
+
+  
+  story_heading:String,
+  story_title:String,
+  story_content:String,
+
+  story_heading1:String,
+  story_title1:String,
+  story_content1:String,
+
+  story_heading2:String,
+  story_title2:String,
+  story_content2:String,
+
+  story_heading3:String,
+  story_title3:String,
+  story_content3:String,
+
+  story_heading4:String,
+  story_title4:String,
+  story_content4:String,
+
+  story_heading5:String,
+  story_content5:String,
+  
   review:[{
     type:Schema.Types.ObjectId,
     ref:"Review",

@@ -22,30 +22,59 @@
 
         <div class="card col-6 offset-3 show-card listing-card">
 
-
-            <img src="<%= listing.image.url %>" class="card-img-top show-image" alt="listing_image" loading="lazy" />
+            <img src="<%= listing.image.url %>" class="card-img-top show-image" alt="listing_image" loading="lazy">
             <div class="card-body">
-                <p class="card-text">Owned By <i><b>
-                            <%= listing.owner.username %>
-                        </b></i></p>
+                <p class="card-text">Owned By <i><b><%= listing.owner.username %></b></i></p>
 
-                <p class="card-text">
-                    <%= listing.description %>
-                </p>
+                <p class="card-text"><%= listing.description %></p>
 
-                <p class="card-text">
-                    &#8377;<%= listing.price.toLocaleString("en-IN") %>
-                </p>
-                <p class="card-text">
-                    <%= listing.location %>
-                </p>
+               
+            
+                        <div class="card" style="border: none;">
+                            <div class="card-header">
+                                <h4 class="card-title mb-2 mt-3"><%= listing.story_heading %></h4>
 
-                <p class="card-text">
-                    <%= listing.country %>
-                        <p class="card-text">
-                            <%= listing.createdAt %>
-                        </p>
-            </div>
+                            </div>
+                            <div class="card-body">
+                                
+                                <h5 class="card-subtitle mb-2 mt-3 mx-2"><%= listing.story_title %></h5>
+                                <p class="card-text me-2 mx-2"><%= listing.story_content %></p>
+
+                                <h4 class="card-subtitle mb-2 mt-3 mx-3"><%= listing.story_heading1 %></h4><hr>
+                                <h5 class="card-subtitle mb-2 mt-3 mx-2"><%= listing.story_title1 %></h5>
+                                <p class="card-text me-2 mx-2"><%= listing.story_content1 %></p>
+
+                               
+                                <h4 class="card-subtitle mb-2 mt-3 mx-3"><%= listing.story_heading2 %></h4><hr>
+                                <h5 class="card-subtitle mb-2 mt-3 mx-2"><%= listing.story_title2 %></h5>
+                                <p class="card-text me-2 mx-2"><%= listing.story_content2 %></p>
+
+                                
+                                <h4 class="card-subtitle mb-2 mt-3 mx-3"><%= listing.story_heading3 %></h4><hr>
+                                <h5 class="card-subtitle mb-2 mt-3 mx-2"><%= listing.story_title3 %></h5>
+                                <p class="card-text me-2 mx-2"><%= listing.story_content3 %></p>
+
+                               
+                                <h4 class="card-subtitle mb-2 mt-3 mx-3"><%= listing.story_heading4 %></h4><hr>
+                                <h5 class="card-subtitle mb-2 mt-3 mx-2"><%= listing.story_title4 %></h5>
+                                <p class="card-text me-2 mx-2"><%= listing.story_content4 %></p>
+
+                                <h4 class="card-subtitle mb-2 mt-3 mx-3"><%= listing.story_heading5 %></h4><hr>
+                                <p class="card-text me-2 mx-2"><%= listing.story_content5 %></p>
+                            </div>
+                            <div class="card-footer mt-3 " style="border: none;">
+                                <p class="card-text mt-5">
+                                    &#8377;<%= listing.price.toLocaleString("en-IN") %>
+                                </p>
+                                <p class="card-text" ><%= listing.location %></p>
+                    
+                                   <p class="card-text"> <%= listing.country %>
+                                    <p class="card-text btn btn-success mb-3"> <%= listing.createdAt %>
+                                </p>
+
+                            </div>
+                        </div>
+          </div>
         </div>
         <br />
         <% if(currentUser && listing.owner._id.equals(currentUser._id)) { %>
