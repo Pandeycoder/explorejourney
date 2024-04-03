@@ -24,8 +24,6 @@
             <img src="<%= listing.image.url %>" class="card-img-top show-image" alt="listing_image" loading="lazy"/>
             <div class="card-body">
                 <p class="card-text">Owned By <i><b><%= listing.owner.username %></b></i></p>
-                  <p class="card-text">Owned By <i><b><%= listing.owner.username %></b></i></p>
-                
 
                 <p class="card-text"><%= listing.description %></p>
 
@@ -35,7 +33,6 @@
             <p class="card-text"><%= listing.location %></p>
 
                <p class="card-text"> <%= listing.country %>
-                <p class="card-text"> <%= listing.createdAt %>
             </p>
           </div>
     </div>
@@ -97,19 +94,10 @@
       <% for(review of listing.review)  { %>
         <div class="card col-5 ms-3 mb-3">
             <div class="card-body">
-                <div style="display: flex; flex-wrap: wrap;">
-                    <button class="btn me-2" type="button"  data-bs-toggle="dropdown"
-                aria-expanded="false" style= "border: none;" >
-                <img src="/img/dummy.jpg" class="dropdown-class-img" alt="" id="dropdownMenuButton">
-              </button>
-              <div>
-                <h5 class="card-title mt-2"><%= review.author.username %></h5>
-
-              </div>
+                <h5 class="card-title">@<%= review.author.username %></h5>
                 <p class="starability-result card-text" data-rating="<%= review.rating %>">
                 </p>
                 <p class="card-text"><%= review.comment %></p>
-                <p class="card-text"><%= review.createdAt %></p>
             </div>
             <% if(currentUser && review.author.equals(currentUser._id)) { %>
             <form action="/listing/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="post" class="mb-3">
