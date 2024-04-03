@@ -8,6 +8,9 @@ const listingSchema = new Schema({
     required: true,
   },
   description: String,
+  createdAt: { type: Date,
+    default: Date.now 
+   },
   image: {
     url:String,
     filename:String,
