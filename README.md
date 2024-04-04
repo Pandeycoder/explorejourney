@@ -63,7 +63,7 @@
   <li><strong>Start the Server:</strong><br>
       <code>npm start</code></li>
   <li><strong>Access the Application:</strong><br>
-      Open your web browser and navigate to <code><a href="https://explorejourney.onrender.com/users/login" target="_blank">https://explorejourney.onrender.com</a></code>.</li>
+      Open your web browser and navigate to <code><a href="https://explorejourney.onrender.com" target="_blank">https://explorejourney.onrender.com</a></code>.</li>
 </ol>
 
 <!-- Contributing -->
