@@ -63,39 +63,46 @@ module.exports.showListing = async (req, res) => {
 //-----------create post route--------------------
 
 module.exports.createListing = async (req, res, next) => {
-    // let {title,description ,image ,price,country,location}=req.body;
-    // if(!req.body.listing){
-    //     throw new ExpressError(400,"please send valid data !");
-    // }
-    let response = await geocodingClient.forwardGeocode({
-        query: req.body.listing.location,
-        limit: 1,
-    })
-        .send();
 
 
-    let url = req.file.path;
-    let filename = req.file.filename;
+    try {
+        // Extracting multiple images from req.files
+        const images = req.files.map(file => (
+            {
+             url: file.path,
+             filename: file.filename
 
+            }));
+        
+        // Sending geocoding request
+        const response = await geocodingClient.forwardGeocode({
+            query: req.body.listing.location,
+            limit: 1,
+        }).send();
 
-    let listing = req.body.listing;
-    const newListing = new Listing(listing);
+        // Extracting coordinates from geocoding response
+        const coordinates = response.body.features[0].geometry.coordinates;
 
-    newListing.owner = req.user._id;
+        // Creating a new listing object with the provided data
+        const newListing = new Listing({
+            ...req.body.listing, // Copy other listing data
+            image: images, // Assign images
+            owner: req.user._id, // Assuming you have user authentication middleware
+            geometry: {
+                type: "Point",
+                coordinates: coordinates
+            }
+        });
 
-    newListing.image = { url, filename };
-
-    newListing.geometry = response.body.features[0].geometry;
-
-
-    await newListing.save();
-
-    req.flash("success", "New listing created successfully !");
-
-
-    // <!-- -------------------------update now url------------------------------------------------>
-    res.redirect("/");
-
+        // Saving the new listing to the database
+        await newListing.save();
+        
+        req.flash('success', 'New listing created successfully!');
+        res.redirect('/');
+    } catch (err) {
+        next(err);
+    }
+  
 };
 
 //-----------Edit listing----------------

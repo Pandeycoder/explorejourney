@@ -262,17 +262,13 @@
                            
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="false">
-                                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
-                                style="height: 20rem;" loading="lazy"/>
-                                <div class="card-img-overlay"></div>
-                            </div>
-                            <div class="carousel-item " data-bs-interval="false">
-                                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
-                                style="height: 20rem;" loading="lazy"/>
-                                <div class="card-img-overlay"></div>
-                            </div>
-                           
+                            <% listing.image.forEach((image, index) => { %>
+                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="false">
+                                    <img src="<%= image.url %>" class="card-img-top" alt="<%= image.filename %>"  style="height: 20rem;" loading="lazy">
+                                </div>
+                            
+                                <% }); %>
+
                             <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner_<%= listing._id %>">
                                 <span class="carousel-control-prev-icon btn btn-danger" style="border-radius: 50%;"></span>
                             </button>

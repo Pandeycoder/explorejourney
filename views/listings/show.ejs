@@ -23,7 +23,9 @@
 
         <div class="card col-6 offset-3 show-card listing-card">
 
-            <img src="<%= listing.image.url %>" class="card-img-top show-image" alt="listing_image" loading="lazy">
+            <% listing.image.forEach(image => { %>
+                <li><img src="<%= image.url %>" alt="<%= image.filename %>"  class="card-img-top show-image" loading="lazy"></li>
+              <% }); %>
             <div class="card-body">
                 <p class="card-text">Owned By <i><b><%= listing.owner.username %></b></i></p>
 
