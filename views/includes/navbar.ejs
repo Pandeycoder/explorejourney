@@ -94,6 +94,32 @@
   color: blue !important;
 
 }
+
+
+.highlight-button {
+      background-color: rgb(9, 9, 202); /* Button background color */
+      color: #fff; /* Text color */
+      border: none; /* Remove button border */
+      
+      padding: 10px 15px; /* Padding inside the button */
+      border-radius: 0.25em; /* Rounded corners */
+      transition: all 3s ease; /* Smooth transition effect */
+      animation: pulse 2s infinite; /* Animation effect */
+      border-radius: 10px !important;
+    }
+    .highlight-button:hover
+    {
+      background-color: green;
+    border-radius: 10px;
+    color: white;
+    }
+
+    /* Keyframes for pulse animation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
