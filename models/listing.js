@@ -11,10 +11,14 @@ const listingSchema = new Schema({
   createdAt: { type: Date,
     default: Date.now 
    },
-  image: {
-    url:String,
-    filename:String,
-  },
+  
+   image: [
+    {
+        url: String,
+        filename: String
+    }
+  ],
+  
   price: Number,
   discountPrice:Number,
   location: String,
