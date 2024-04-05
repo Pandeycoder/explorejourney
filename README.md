@@ -63,7 +63,7 @@
   <li><strong>Start the Server:</strong><br>
       <code>npm start</code></li>
   <li><strong>Access the Application:</strong><br>
-      Open your web browser and navigate to <code><a href="https://explorejourney.onrender.com/users/login">https://explorejourney.onrender.com</a></code>.</li>
+      Open your web browser and navigate to <code><a href="https://explorejourney.onrender.com" target="_blank">https://explorejourney.onrender.com</a></code>.</li>
 </ol>
 
 <!-- Contributing -->
@@ -84,8 +84,8 @@
 <p>This project is licensed under the MIT License. For more information, see the <a href="LICENSE">LICENSE</a> file.</p>
 
 <!-- Author -->
-<h2>Author:<a href="https://campuscreative.cyclic.app">Rahul Kumar pandey</a> </h2>
-<p><a href="https://campuscreative.cyclic.app/">Your Portfolio</a></p>
+<h2>Author:<a href="https://campuscreative.cyclic.app" target="_blank">Rahul Kumar pandey</a> </h2>
+<p><a href="https://campuscreative.cyclic.app/" target="_blank">Your Portfolio</a></p>
 
 
 
