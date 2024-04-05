@@ -282,7 +282,8 @@ font-size: 28px; /* Increase the font size on hover */
                          
                           <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="false">
                               <img src="<%= image.url %>" class="card-img-top" alt="<%= image.filename %>"  style="height: 20rem;" loading="lazy">
-                          </div>
+                              <div class="card-img-overlay"></div>
+                            </div>
                       
                           <% }); %>
                       

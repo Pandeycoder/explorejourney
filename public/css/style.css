@@ -205,8 +205,8 @@ body{
     opacity: 0;
 }
 .card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: white;
+  opacity: 0.3;
+  background-color: rgb(0, 0, 0);
 }
 
 
