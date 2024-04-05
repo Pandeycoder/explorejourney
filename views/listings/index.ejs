@@ -250,15 +250,15 @@
 
                     <div class="carousel slide mt-3"  id="banner_<%= listing._id %>">
                         <div class="carousel-indicators">
-                            <button data-bs-slide-to="0" class="active mb-3 me-3" style="border: none; width: 0px; height:0px;">
-                                <span class="circle-indicator"></span>
-                            </button>
-                            <button data-bs-slide-to="1" class=" me-3" style="border: none; width: 0px; height:0px;">
-                                <span class="circle-indicator"></span>
-                            </button>
-                            <button data-bs-slide-to="2"  style="border: none; width: 0px; height:0px;">
-                                <span class="circle-indicator"></span>
-                            </button>
+
+                            <div class="carousel-indicators">
+                                <% for (let i = 0; i < listing.image.length; i++) { %>
+                                    <button data-bs-slide-to="<%= i %>" class="<%= i === 0 ? 'active' : '' %> mb-3 me-3" style="border: none; width: 0px; height: 0px;">
+                                        <span class="circle-indicator"></span>
+                                    </button>
+                                <% } %>
+                            </div>
+                            
                            
                         </div>
                         <div class="carousel-inner">
