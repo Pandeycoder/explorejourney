@@ -15,23 +15,7 @@
     }
     }
 
-    .filters {
-
-        position: fixed;
-        top: 3rem;
-        background-color: #fff;
-        /* Adjust according to your design */
-        padding: 1rem;
-        /* Adjust according to your design */
-        z-index: 1000;
-        /* Adjust according to your design and layout */
-        width: 100%;
-        /* Adjust according to your design */
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
+   
 
     .filter {
         text-align: center;
@@ -158,76 +142,170 @@ font-size: 28px; /* Increase the font size on hover */
 color: rgb(41, 72, 226); /* Change the color on hover */
 font-size: 28px; /* Increase the font size on hover */
 }
+
+
+
+
+.filters-container {
+            overflow-x: hidden;
+            white-space: nowrap;
+            padding-bottom: 1rem;
+            position: relative;
+            overscroll-behavior: none;
+            background-color: white;
+            z-index: 1000;
+            width: 100%;
+            position: fixed;
+        }
+
+        .filter {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .filter p {
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+
+        .filters {
+            position: fixed;
+            top: 3rem;
+            background-color: #fff;
+            /* Adjust according to your design */
+            padding: 1rem;
+            /* Adjust according to your design */
+            z-index: 1000;
+            /* Adjust according to your design and layout */
+            width: 100%;
+            /* Adjust according to your design */
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter {
+            text-align: center;
+            margin-right: 1.4rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+            flex-wrap: wrap;
+        }
+
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .filter p {
+            font-size: 0.8rem;
+        }
+
+        .taxt-info {
+            display: none;
+        }
+
+        .tax-toggle {
+            border: 1px solid black;
+            border-radius: 1rem;
+            height: 3.25rem;
+            padding: 1rem;
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 767.98px) {
+            .filters-container {
+                overflow-x: auto;
+              
+                scroll-behavior: smooth;
+            }
+
+            .filters-container::-webkit-scrollbar {
+                display: none;
+                
+            }       
+        /* Hide the carousel control buttons by default */
+        .carousel-control-prev
+        {
+            display: none;
+        }
+        .carousel-control-next {
+            display: block;
+        }
+
+        /* Show carousel control buttons on hover */
+        .carousel:hover  .carousel-control-prev
+        {
+            display: none;
+        }
+        .carousel:hover .carousel-control-next {
+            display: block;
+        }
+
+        }
 </style>
 
-<div class="filters pb-1">
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-fire"></i>
+<div class="row">
+    <div class="col-md-12">
+        <div class="filters-container">
+            <div class="filter mx-3">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Iconic Cities</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain"></i></div>
+                <p>Mountains</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>Castles</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Amazing Pools</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-cow"></i></div>
+                <p>Farms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-igloo"></i></div>
+                <p>Domes</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-ship"></i></div>
+                <p>Houseboats</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-ship"></i></div>
+                <p>Houseboats</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-ship"></i></div>
+                <p>Houseboats</p>
+            </div>
         </div>
-        <p>Trending</p>
     </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-bed"></i>
-        </div>
-        <p>rooms</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-mountain-city"></i>
-        </div>
-        <p>Iconic Cities</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-mountain"></i>
-        </div>
-        <p>Mountains</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-brands fa-fort-awesome"></i>
-        </div>
-        <p>Castels</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-person-swimming"></i>
-        </div>
-        <p>Amazing Pools</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-campground"></i>
-        </div>
-        <p>Camping</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-cow"></i>
-        </div>
-        <p>Farms</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-campground"></i>
-        </div>
-        <p>Camping</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-igloo"></i>
-        </div>
-        <p>Domes</p>
-    </div>
-    <div class="filter">
-        <div>
-            <i class="fa-solid fa-ship"></i>
-        </div>
-        <p>Houseboats</p>
-    </div>
-
     <div class="tax-toggle">
         <div class="form-check-reverse form-switch ">
 
@@ -235,7 +313,19 @@ font-size: 28px; /* Increase the font size on hover */
             <label for=" class=form-check-label" for="flexSwitchCheckDefault">Display total before taxes</label>
         </div>
     </div>
-</div><br><br>
+</div>
+
+    <!-- <div class="tax-toggle">
+        <div class="form-check-reverse form-switch ">
+
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label for=" class=form-check-label" for="flexSwitchCheckDefault">Display total before taxes</label>
+        </div>
+    </div>
+</div><br><br> -->
+
+
+
 <div class="container">
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-5 ">
     <% for( listing of allListings) { %>
