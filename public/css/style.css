@@ -84,6 +84,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 3rem;
 }
 
 .f-info-socials i{
@@ -116,6 +117,17 @@ body{
     color:rgb(248, 24, 24);
     rotate: 1 2 1 360deg;
     cursor: pointer;
+}
+.f-language{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.f-language .dropdown{
+  align-items: center;
+  margin-left:45%;
+  margin-bottom: 3rem;
+
 }
 
 /*Footer dark---------------------*/
@@ -158,8 +170,18 @@ body{
   
   @media (max-width:767px) {
     .footer-dark .item:not(.social) {
-      text-align:center;
+      text-align:justify;
       padding-bottom:20px;
+      padding-left: 5rem;
+    }
+    .f-language{
+      text-align: justify;
+      margin-bottom: 3rem;
+      align-items: center;
+    }
+    .f-language .dropdown{
+      align-items: center;
+      margin-left:35%;
     }
   }
   
