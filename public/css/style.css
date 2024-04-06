@@ -199,6 +199,10 @@ body{
 .listing-list{
     text-decoration: none;
 }
+.listing-card-style
+{
+ margin-top: 4rem !important; 
+}
 
 /*---------------- card effect-----------*/
 .card-img-overlay{
@@ -209,6 +213,50 @@ body{
   background-color: rgb(0, 0, 0);
 }
 
+
+
+@media (max-width:767px) {
+  
+  .listing-card{
+      border:none;
+      margin-bottom: 0rem;
+      /* box-shadow: 0 4px 8px black;
+      transition: 0.5s;  */
+  }
+  /* .card:hover{ 
+      box-shadow: 0 16px 24px goldenrod;
+  } */
+  .card-img-top{
+      border-radius: 1rem !important;
+      width: 100% !important;
+      object-fit: cover !important;
+  }
+  .card-body{
+      padding:0 !important;
+  }
+  .card-text {
+      font-weight: 400 !important;
+      text-align: justify !important;
+  }
+  .listing-list{
+      text-decoration: none;
+  }
+  
+  /*---------------- card effect-----------*/
+  .card-img-overlay{
+      opacity: 0;
+  }
+  .card-img-overlay:hover{
+      opacity: 0.3;
+      background-color: rgb(0, 0, 0);
+  }
+  .listing-card-style
+  {
+   margin-top: 0rem !important; 
+  }
+  
+  }
+  
 
 
 
