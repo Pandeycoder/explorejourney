@@ -26,6 +26,38 @@ body{
 
 }
 
+.navbar-toggler {
+  border: none;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #e3dede;
+
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white;
+  font-weight: 600;
+}
+
+
+@media (max-width: 991px) {
+  .body1 {
+      background-color: white;
+      scroll-behavior: smooth;
+  }
+} 
+
 .btn-search{
   background-color: #fe424d;
   color:#fff;
@@ -68,6 +100,129 @@ body{
   margin-right: 1rem;
   font-size: 1.25rem;
 }
+
+
+.btn-search {
+  background-color: #fe424d;
+  color: #fff;
+  border-radius: 25px;
+
+}
+
+.btn-search:hover {
+  background-color: #fe424d;
+  color: #fff;
+}
+
+.btn-search i {
+  display: inline;
+  margin-right: 0.75rem;
+}
+
+.search-input {
+  border-radius: 25px;
+  padding: 0.5rem 3rem 0.7rem 4rem;
+  font-size: 0.95rem;
+  border: none;
+
+}
+
+.search-input:focus {
+  box-shadow: none;
+  /* Remove the box-shadow */
+  border: none;
+}
+
+.btn-list {
+  background-color: #fff;
+  color: #fff;
+  border-radius: 25px;
+  height: 2.75rem;
+  width: 5rem;
+  padding: 0rem 1rem 0 1rem;
+  border: 1px solid rgb(143, 138, 138);
+  box-shadow: 0 0px 0px black;
+  transition: 0.7s;
+}
+
+.btn-list:hover {
+  box-shadow: 0 4px 8px #fff;
+  border: 1px solid rgb(150, 143, 143);
+}
+
+.btn-list i {
+  display: inline;
+  color: black;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.title,
+.title1 {
+  font-size: 15px !important;
+  color: rgb(0, 204, 255);
+  text-shadow: 4px 4px 6px pink;
+  font-family: Arial;
+  font-weight: bold;
+
+}
+
+.title1:hover {
+  background-color: #7FFFD4;
+  border-radius: 10px;
+}
+
+
+.dropdown-class-img,.dropdown-class-img-b{
+  border-radius: 50%;
+  border: 2px solid rgb(133, 129, 129);
+  box-shadow: 0px 0px 10px #002147;
+
+}
+.dropdown-class-img
+{
+
+  width: 40px;
+  height: 40px; 
+}
+.dropdown-class-img-b
+{
+  width: 70px;
+  height: 70px; 
+  margin-left: 5rem;
+  
+}
+.dropdown-logout a:hover
+{
+color: blue !important;
+
+}
+
+
+.highlight-button {
+    background-color: rgb(9, 9, 202); /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove button border */
+    
+    padding: 10px 15px; /* Padding inside the button */
+    border-radius: 0.25em; /* Rounded corners */
+    transition: all 3s ease; /* Smooth transition effect */
+    animation: pulse 2s infinite; /* Animation effect */
+    border-radius: 10px !important;
+  }
+  .highlight-button:hover
+  {
+    background-color: green;
+  border-radius: 10px;
+  color: white;
+  }
+
+  /* Keyframes for pulse animation */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
 
 /* -------footer style-----------------*/
 .f-info-links a{
