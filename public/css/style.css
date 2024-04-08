@@ -250,7 +250,6 @@ color: blue !important;
 }
 .f-info{
     text-align: center;
-    height: 8rem;
     display: flex;
     background-color: #ebebeb;
     flex-wrap: wrap;
