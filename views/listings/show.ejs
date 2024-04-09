@@ -23,6 +23,11 @@
 
         <div class="card col-6 offset-3 show-card listing-card">
 
+            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                   
+                </div>
+               
             <% listing.image.forEach(image => { %>
                 <li><img src="<%= image.url %>" alt="<%= image.filename %>"  class="card-img-top show-image" loading="lazy"></li>
               <% }); %>
@@ -91,7 +96,7 @@
             <% } %>
 
 
-                <div class="main-review-text mb-3 ">
+                <div class=" mb-3">
                     <hr />
                     <% if(currentUser) {%>
                         <h4>Public Review</h4>
@@ -135,7 +140,7 @@
                                 <div class="row review-card-main">
                                     <p><b>All Reviews</b></p>
                                     <% for(review of listing.review) { %>
-                                        <div class="card ms-3 mb-3">
+                                        <div class="card ms-3 mb-3 review-card">
                                             <div class="card-body">
                                                 <div style="display: flex; flex-wrap: wrap;">
                                                     <button class="btn me-2" type="button" data-bs-toggle="dropdown"

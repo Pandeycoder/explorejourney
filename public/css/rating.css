@@ -244,10 +244,7 @@ screen and (min-resolution: 192dpi) {
     color: rgb(46, 14, 188);
     font-weight: 700 !important;
   }
-  .main-review-text
-  {
-    margin-left: 5rem;
-  }
+  
 }
 .review-username a
 {
