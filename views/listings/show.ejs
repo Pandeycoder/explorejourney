@@ -23,10 +23,7 @@
 
         <div class="card col-6 offset-3 show-card listing-card">
 
-            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                   
-                </div>
+            <div id="imageCarousel">
                
             <% listing.image.forEach(image => { %>
                 <li><img src="<%= image.url %>" alt="<%= image.filename %>"  class="card-img-top show-image" loading="lazy"></li>
