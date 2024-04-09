@@ -95,7 +95,7 @@
 
                 <div class=" mb-3">
                     <hr />
-                    <% if(currentUser) {%>
+                   
                         <h4>Public Review</h4>
                         <form action="/listing/<%= listing.id %>/reviews" method="POST" novalidate
                             class="needs-validation">
@@ -127,10 +127,14 @@
                                     required></textarea>
                                 <div class="invalid-feedback">Please add some comments</div>
                             </div>
+                          
                             <button class="btn btn-outline-success">post</button>
+                           
                         </form>
 
-                        <% } %>
+                        <% if(!currentUser) {%>
+                            <% } %>
+                    
 
                             <% if(listing.review.length> 0 ) { %>
                                 <hr />
