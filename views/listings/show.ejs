@@ -83,7 +83,7 @@
         <% if(currentUser && listing.owner._id.equals(currentUser._id)) { %>
             <div class="btns mb-3">
                 <!-- -------------------------update now url------------------------------------------------>
-                <a href="/<%= listing.id %>/edit" class="btn btn-dark col-1  offset-3 edit-btn">Edit</a>
+                <a href="/<%= listing.id %>/edit" class="btn btn-dark   offset-3 edit-btn">Edit</a>
                 <form method="post" action="/<%= listing._id %>?_method=DELETE">
                     <button class="btn btn-dark offset-5 ">Delete</button>
                 </form>
@@ -91,10 +91,10 @@
             <% } %>
 
 
-                <div class="col-8 offset-3 mb-3">
+                <div class=" mb-3">
                     <hr />
                     <% if(currentUser) {%>
-                        <h4>Customer Review</h4>
+                        <h4>Public Review</h4>
                         <form action="/listing/<%= listing.id %>/reviews" method="POST" novalidate
                             class="needs-validation">
                             <!-- <div class="mb-3 mt-3">
@@ -135,10 +135,10 @@
 
                             <% if(listing.review.length> 0 ) { %>
                                 <hr />
-                                <div class="row">
+                                <div class="row review-card-main">
                                     <p><b>All Reviews</b></p>
                                     <% for(review of listing.review) { %>
-                                        <div class="card col-5 ms-3 mb-3">
+                                        <div class="card ms-3 mb-3">
                                             <div class="card-body">
                                                 <div style="display: flex; flex-wrap: wrap;">
                                                     <button class="btn me-2" type="button" data-bs-toggle="dropdown"
@@ -146,19 +146,21 @@
                                                         <img src="/img/dummy.jpg" class="dropdown-class-img" alt=""
                                                             id="dropdownMenuButton">
                                                     </button>
-                                                    <div>
-                                                        <h5 class="card-title mt-2">@<%= review.author.username %>
+                                                    <div class="review-username">
+                                                        <a href="#"><h5 class="card-title mt-2"><b>
+                                                            <%= review.author.username %></b>
                                                         </h5>
+                                                    </a>
 
                                                     </div>
                                                 </div>
                                                 <p class="starability-result card-text"
                                                     data-rating="<%= review.rating %>">
                                                 </p>
-                                                <p class="card-text">
+                                                <p class="card-text card-text-comment">
                                                     <%= review.comment %>
                                                 </p>
-                                                <p class="card-text"><%= review.createdAt %></p>
+                                                <p class="card-text card-review-time mb-3"><%= review.createdAt %></p>
                                             </div>
                                             <% if(currentUser && review.author.equals(currentUser._id)) { %>
                                                 <form
@@ -173,7 +175,7 @@
                                 <hr>
                                 <% } %>
                 </div>
-                <div class="col-6 offset-3 mb-3">
+                <div class="container-fluid mb-3">
 
                     <h3>Where you'll be</h3>
                     <div id="map">

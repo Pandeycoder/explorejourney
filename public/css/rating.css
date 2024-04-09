@@ -204,3 +204,54 @@ screen and (min-resolution: 192dpi) {
   transition: background-position .7s;
 }
 
+
+@media (max-width:767px) {
+  #map
+  {
+   
+    height: 300px;
+    width: 100%
+    
+  }
+  .review-card-main
+  {
+    margin-right: 1rem;
+  }
+  .review-card
+  {
+
+    background-color: rgb(249, 249, 252);
+    box-shadow: 0px 0px 16px 0px  rgb(99, 99, 102);;
+    
+  }
+  .review-username
+  {
+    font-size: 10px;
+  }
+  .card-text-comment
+  {
+    line-height: 1.4;
+    font-size: 15px;
+      font-weight: 700 !important;
+      text-align: justify !important;
+      color: #625f5f;
+  
+  }
+  .card-review-time
+  {
+   
+    font-size: 14px;
+    color: rgb(46, 14, 188);
+    font-weight: 700 !important;
+  }
+}
+.review-username a
+{
+  text-decoration: none;
+  color: darkcyan;
+}
+.review-username a:hover
+{
+  color:rgb(7, 7, 167);
+}
+
