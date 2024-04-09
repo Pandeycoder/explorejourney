@@ -91,16 +91,13 @@
             <% } %>
 
 
-                <div class=" mb-3">
+                <div class="main-review-text mb-3 ">
                     <hr />
                     <% if(currentUser) {%>
                         <h4>Public Review</h4>
                         <form action="/listing/<%= listing.id %>/reviews" method="POST" novalidate
                             class="needs-validation">
-                            <!-- <div class="mb-3 mt-3">
-                <label for="rating" class="form-label">Rating</label>
-                <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range" />
-            </div> -->
+                           
 
                             <div class="col-8 offset-3 mb-3">
                                 <label for="rating" class="form-label">Rating</label>
