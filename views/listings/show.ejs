@@ -4,7 +4,7 @@
 
         let listing;
         try {
-            const jsonString = '<%- JSON.stringify(listing) %>';
+            const jsonString = `<%- JSON.stringify(listing) %>`;
             listing = JSON.parse(jsonString);
         } catch (error) {
             console.error('Error parsing JSON:', error);
