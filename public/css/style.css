@@ -462,6 +462,17 @@ color: blue !important;
     padding-left: 0;
     padding-right: 0;
 }
+.show-heading
+{
+    margin-top: 120px;
+}
+
+@media (max-width:767px) {
+  .show-heading
+{
+    margin-top:2rem;
+}
+}
 
 /*----------------Map style-------------------*/
 #map {
