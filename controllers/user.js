@@ -71,6 +71,10 @@ module.exports.renderLogin=(req, res) => {
 };
 
 
+module.exports.renderPortfolio=(req, res) => {
+    res.render("users/portfolio.ejs");
+};
+
 //------------------------logout controller--------------------------------
 module.exports.logout=(req,res,next)=>{
     req.logOut((err)=>{

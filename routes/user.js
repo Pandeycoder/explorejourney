@@ -41,6 +41,10 @@ router.get("/logout",userController.logout);
 
 
 
+router.get("/portfolio",userController.renderPortfolio);
+
+
+
 
 // //---------------signup -------------------
 

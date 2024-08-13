@@ -124,7 +124,9 @@ app.use("/",listingRouter);
 
 app.use("/listing/:id/reviews",reviewRouter);
 
-app.use("/users",userRouter)
+app.use("/users",userRouter);
+
+app.use("/portfolio",portfolioRouter);
 
 //------------------------------------routes end---------------------
 
