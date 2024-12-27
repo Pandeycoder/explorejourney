@@ -134,6 +134,31 @@ app.all("*",(req,res,next)=>{
     next(new ExpressError (404,"page not found !"));
 });
 
+
+
+
+
+// Example route
+app.get('/task', (req, res) => {
+  res.send('Task executed!');
+});
+//Function to automatically trigger a task
+const startAutomaticTask = () => {
+    setInterval(async () => {
+        try {
+            // Example: Trigger your own backend endpoint
+            console.log('Executing automatic task...');
+            const response = await axios.get('http://localhost:3000/task');
+            console.log('Task triggered successfully:', response.status);
+        } catch (error) {
+            console.error('Error triggering task:', error.message);
+        }
+    }, 30 * 1000); // Trigger every 5 minutes
+};
+
+// Start the automatic task
+startAutomaticTask();
+
 app.use((err, req, res, next) => {
 
     let {statusCode=500 ,message="something went wrong"}=err;
